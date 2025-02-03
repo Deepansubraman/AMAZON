@@ -1,0 +1,17 @@
+int a=arr[0], b=arr[1], n=arr.length;
+        if(a>b) b=a;
+        
+        
+        for(int i=2; i<n; i++){
+            int temp=arr[i];
+            
+            if(a+temp >= b){
+                int d= a;
+                a=b;
+                b= d+temp;
+            } else{
+                a=b;
+            }
+        }
+        
+        return b>a ? b : a;
